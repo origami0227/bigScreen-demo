@@ -8,8 +8,7 @@
   <script>
     const clientWidth = document.documentElement.clientWidth//获取设备宽度
     const clientHeight = document.documentElement.clientHeight//获取设备高度
-    let pageWidth//页面宽度
-    pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth;
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth;
     const pageHeight = pageWidth / (16/9)//页面高度
     const string = `<style>html{
     font-size:${pageWidth/100}px
