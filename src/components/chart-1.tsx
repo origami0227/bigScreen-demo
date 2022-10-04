@@ -1,12 +1,13 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts'
-const px = (n) => n / 2420 * (window as any).pageWidth;
+import {px} from "../shared/px";
+
 
 export const Chart1 = () => {
     const divRef = useRef(null)
     useEffect(() => {
-        let myChart = echarts.init(divRef.current);
-        myChart.setOption({
+        let myChart = echarts.init(divRef.current);//初始化chart
+        myChart.setOption({//设置
             textStyle: {
                 fontSize: px(12),
                 color: '#79839E'
