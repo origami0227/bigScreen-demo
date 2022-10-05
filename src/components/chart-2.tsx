@@ -7,7 +7,7 @@ import {createEchartsOptions} from '../shared/create-echarts-options';
 export const Chart2 = () => {
     const divRef = useRef(null);
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        let myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
             xAxis: {
                 type: 'value',

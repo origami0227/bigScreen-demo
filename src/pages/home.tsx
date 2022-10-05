@@ -7,7 +7,7 @@ import {Chart2} from "../components/chart-2";
 
 export const Home = () => {
 
-
+    const year = new Date().getFullYear();
     return (
         <div className="home">
             <header style={{backgroundImage: `url(${headerBg})`}}/>
@@ -22,6 +22,9 @@ export const Home = () => {
                 <section className="bordered section4"></section>
                 <section className="bordered section5"></section>
             </main>
+            <footer>
+                &copy; Origami 2021-{year}
+            </footer>
         </div>
     );
 };
