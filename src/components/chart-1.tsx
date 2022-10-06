@@ -1,13 +1,37 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts'
 import {px} from "../shared/px";
+import {createEchartsOptions} from "../shared/create-echarts-options";
 
 
 export const Chart1 = () => {
     const divRef = useRef(null)
+    const myChart = useRef(null);
+    const data =[
+        {name:'周一',count:10},
+        {name:'周二',count:20},
+        {name:'周三',count:26},
+        {name:'周四',count:41},
+        {name:'周五',count:15},
+        {name:'周六',count:26},
+        {name:'周日',count:27},
+    ]
     useEffect(() => {
-        let myChart = echarts.init(divRef.current);//初始化chart
-        myChart.setOption({//设置
+        setInterval(() => {
+            const newData = [
+                {name:'周一',count:Math.random() * 15},
+                {name:'周二',count:Math.random() * 20},
+                {name:'周三',count:Math.random() * 25},
+                {name:'周四',count:Math.random() * 30},
+                {name:'周五',count:Math.random() * 15},
+                {name:'周六',count:Math.random() * 26},
+                {name:'周日',count:Math.random() * 27},
+            ];
+            x(newData);
+        }, 1000);
+    }, []);
+    const x = (data)=>{
+        myChart.current.setOption(createEchartsOptions({
             textStyle: {
                 fontSize: px(12),
                 color: '#79839E'
@@ -15,7 +39,7 @@ export const Chart1 = () => {
             title: {show: false},
             legend: {show: false},
             xAxis: {
-                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+                data: data.map(i=>i.name),
                 axisTick: {show: false},
                 axisLine: {
                     lineStyle: {color: '#083B70'}
@@ -51,9 +75,13 @@ export const Chart1 = () => {
             },
             series: [{
                 type: 'bar',
-                data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
+                data: data.map(i=>i.count)
             }]
-        });
+        }))
+    }
+    useEffect(() => {
+        myChart.current = echarts.init(divRef.current);
+        x(data);
     }, []);
     return (
         <div className="bordered 运动统计">
