@@ -30,21 +30,32 @@ export const Chart11 = () => {
                     return name + ' ' + value;
                 }
             },
+
             series: [
                 {
-                    center: ['60%', '50%'],
+                    startAngle: -20,
                     type: 'pie',
-                    radius: '80%',
-                    label: {show: false},
-                    labelLine: {show: false},
-                    data: data,
-                    emphasis: {
-                        itemStyle: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    radius: ['25%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: true, position: 'outside', textStyle: {color: 'white', fontSize: px(20)},
+                        distanceToLabelLine: 0,
+                        formatter(options) {
+                            return options.value * 100 + '%';
                         }
-                    }
+                    },
+                    labelLine: {show: true, length: 0},
+                    roseType: 'area',
+                    itemStyle: {
+                        shadowBlur: px(200),
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+                    data: [
+                        {value: 0.12, name: '优秀率'},
+                        {value: 0.26, name: '良好率'},
+                        {value: 0.22, name: '合格率'},
+                        {value: 0.40, name: '不合格率'},
+                    ]
                 }
             ]
         }));
