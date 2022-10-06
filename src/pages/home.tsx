@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.scss';
-import headerBg from '../images/header.png'
+import headerBg from '../images/header2.png'
 import {Chart1} from "../components/chart-1";
 import {Chart2} from "../components/chart-2";
 import {Chart3} from "../components/chart-3";
@@ -35,7 +35,7 @@ export const Home = () => {
                 <section className="section4">
                     <Chart6 />
                     <div className="bordered 年龄段">
-                        <h2>犯罪人员年龄段分布</h2>
+                        <h2>运动年龄段分布</h2>
                         <div className="charts">
                             <Chart7/>
                             <Chart8/>
@@ -44,14 +44,14 @@ export const Home = () => {
                     </div>
                 </section>
                 <section className=" section5">
-                    <div className="bordered row1 案发类型">
-                        <h2>案发类型统计</h2>
+                    <div className="bordered row1 校友">
+                        <h2>中国高校冠军校友人数</h2>
                         <div className="charts">
                             <Chart10 />
                         </div>
                     </div>
-                    <div className="bordered row2 案发街道">
-                        <h2>案发街道统计</h2>
+                    <div className="bordered row2 合格率">
+                        <h2>体测合格率</h2>
                         <div className="charts">
                             <Chart11 />
                         </div>

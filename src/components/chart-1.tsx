@@ -15,7 +15,7 @@ export const Chart1 = () => {
             title: {show: false},
             legend: {show: false},
             xAxis: {
-                data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
                 axisTick: {show: false},
                 axisLine: {
                     lineStyle: {color: '#083B70'}
@@ -56,8 +56,8 @@ export const Chart1 = () => {
         });
     }, []);
     return (
-        <div className="bordered 管辖统计">
-            <h2>案发派出所管辖统计</h2>
+        <div className="bordered 运动统计">
+            <h2>本周学生运动统计</h2>
             <div ref={divRef} className="chart">
 
             </div>

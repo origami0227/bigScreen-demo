@@ -8,7 +8,7 @@ export const Chart10 = () => {
         let myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
             xAxis: {
-                data: ['入室抢劫', '当街偷盗', '团伙诈骗', '刑事案件', '民事案件'],
+                data: ['北京体育大学', '中国人民大学', '北京大学', '清华大学', '上海交通大学'],
                 axisTick: {show: false},
                 axisLine: {
                     lineStyle: {color: '#083B70'}
@@ -35,7 +35,7 @@ export const Chart10 = () => {
             },
             series: [{
                 type: 'bar',
-                data: [40, 22, 20, 18, 32],
+                data: [75, 18, 12, 9, 9],
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                     offset: 0,
                     color: '#0A97FB'

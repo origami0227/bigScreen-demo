@@ -88,7 +88,7 @@
         height: px(530);
       }
     }
-    .管辖统计, .破获排名, .发案趋势, .案发时段, .战果, .籍贯, .年龄段,.案发类型, .案发街道 {
+    .运动统计, .人均运动, .运动趋势, .运动时段, .成绩, .分布, .年龄段,.校友, .合格率 {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -112,7 +112,7 @@
         width: 100%;
       }
     }
-    .发案趋势, .案发时段 {
+    .运动趋势, .运动时段 {
       height: px(363);
     }
     .年龄段 {display: flex;flex-direction: column;
@@ -151,7 +151,7 @@
         h3 {font-size: px(20); color: #7ab6db; margin-top: px(6);}
       }
     }
-    .籍贯 {
+    .分布 {
       height: px(753); background: transparent;
       > .wrapper {
         position: relative;width: 100%;flex: 1;
@@ -178,7 +178,7 @@
         }
       }
     }
-    .战果 {
+    .成绩 {
       > table {
         margin-top: px(38);
         border-collapse: collapse;
@@ -199,7 +199,7 @@
         }
       }
     }
-    .破获排名 {
+    .人均运动 {
       height: px(423);
       .legend {
         display: flex;

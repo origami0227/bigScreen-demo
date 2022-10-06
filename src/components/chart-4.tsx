@@ -6,7 +6,7 @@ import {px} from '../shared/px';
 export const Chart4 = () => {
     const divRef = useRef(null);
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        let myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
             xAxis: {
                 type: 'category',
@@ -26,14 +26,13 @@ export const Chart4 = () => {
                 }
             },
             series: [{
-                name: '故意伤人',
                 type: 'line',
                 data: [
-                    0.15, 0.13, 0.11,
-                    0.13, 0.14, 0.15,
-                    0.16, 0.18, 0.21,
-                    0.19, 0.17, 0.16,
-                    0.15
+                    0.03, 0.05, 0.02,
+                    0.21, 0.18, 0.10,
+                    0.10, 0.18, 0.19,
+                    0.12, 0.23, 0.16,
+                    0.10
                 ],
                 symbol: 'circle',
                 symbolSize: px(12),
@@ -52,8 +51,8 @@ export const Chart4 = () => {
     }, []);
 
     return (
-        <div className="bordered 案发时段">
-            <h2>案发时段分析</h2>
+        <div className="bordered 运动时段">
+            <h2>运动时段分析</h2>
             <div ref={divRef} className="chart"/>
         </div>
     );

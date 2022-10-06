@@ -24,7 +24,7 @@ export const Chart3 = () => {
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
-                data: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                data: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
                 splitLine: {show: true, lineStyle: {color: '#073E78'}},
                 axisTick: {show: false},
                 axisLine: {show: false},
@@ -40,29 +40,29 @@ export const Chart3 = () => {
             },
             series: [
                 {
-                    name: '抢劫',
+                    name: '跑步',
                     type: 'line',
-                    data: [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09].reverse()
+                    data: [0.05, 0.04, 0.07, 0.06, 0.03, 0.05, 0.05, 0.04, 0.04].reverse()
                 },
                 {
-                    name: '醉驾',
+                    name: '篮球',
                     type: 'line',
-                    data: [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10].reverse()
+                    data: [0.07, 0.06, 0.08, 0.08, 0.07, 0.07, 0.07, 0.06, 0.06].reverse()
                 },
                 {
-                    name: '盗窃',
+                    name: '足球',
                     type: 'line',
-                    data: [0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11].reverse()
+                    data: [0.03, 0.04, 0.04, 0.07, 0.05, 0.02, 0.04, 0.03, 0.03].reverse()
                 },
                 {
-                    name: '故意杀人',
+                    name: '羽毛球',
                     type: 'line',
-                    data: [0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12].reverse()
+                    data: [0.03, 0.05, 0.04, 0.06, 0.06, 0.04, 0.05, 0.04, 0.05].reverse()
                 },
                 {
-                    name: '故意伤人',
+                    name: '健身',
                     type: 'line',
-                    data: [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13].reverse()
+                    data: [0.10, 0.09, 0.09, 0.08, 0.07, 0.07, 0.06, 0.05, 0.04].reverse()
                 }
             ].map(obj => ({
                 ...obj,
@@ -74,8 +74,8 @@ export const Chart3 = () => {
     }, []);
 
     return (
-        <div className="bordered 发案趋势">
-            <h2>发案趋势分析</h2>
+        <div className="bordered 运动趋势">
+            <h2>运动项目趋势分析</h2>
             <div ref={divRef} className="chart"/>
         </div>
     );

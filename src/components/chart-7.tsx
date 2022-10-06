@@ -21,7 +21,7 @@ export const Chart7 = () => {
                     label: {
                         show: true, position: 'inside', textStyle: {color: 'white', fontSize: px(20)},
                         formatter(options) {
-                            return options.value * 100 + '%';
+                            return (options.value * 100).toFixed(0) + '%';
                         }
                     },
                     labelLine: {show: false},
@@ -30,8 +30,8 @@ export const Chart7 = () => {
                         borderWidth: px(4)
                     },
                     data: [
-                        {value: 0.4, name: '女'},
-                        {value: 0.6, name: '男'},
+                        {value: 0.45, name: '女'},
+                        {value: 0.55, name: '男'},
                     ]
                 }
             ]
